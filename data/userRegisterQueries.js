@@ -1,4 +1,4 @@
-import User from "../../models/userModel.js";
+import User from "../models/userModel.js";
 
 export const post_check_user_query = async (email) => {
   let user = await User.findOne({ email });

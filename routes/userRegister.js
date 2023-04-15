@@ -1,7 +1,7 @@
 import express from "express";
-import { post_register_user_service } from "../../services/userRegisterService.js";
+import { post_register_user_service } from "../services/userRegisterService.js";
 import { body } from "express-validator";
-import validation from "../../middleware/validation.js";
+import validation from "../middleware/validation.js";
 const router = express.Router();
 
 /*

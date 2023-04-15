@@ -1,10 +1,10 @@
 import {
   get_logged_user_query,
   post_login_user_query,
-} from "../../data/userAuthQueries.js";
+} from "../data/userAuthQueries.js";
 import bcrypt from "bcryptjs";
 import jwt from "jsonwebtoken";
-import { jwtExpiry, jwtSecret } from "../../utils/envVariables.js";
+import { jwtExpiry, jwtSecret } from "../utils/envVariables.js";
 
 export const get_logged_user_service = async (req, res) => {
   try {

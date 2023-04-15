@@ -1,8 +1,8 @@
 import {
   post_check_user_query,
   post_register_user_query,
-} from "../../data/userRegisterQueries.js";
-import { jwtExpiry, jwtSecret } from "../../utils/envVariables.js";
+} from "../data/userRegisterQueries.js";
+import { jwtExpiry, jwtSecret } from "../utils/envVariables.js";
 import bcrypt from "bcryptjs";
 import jwt from "jsonwebtoken";
 

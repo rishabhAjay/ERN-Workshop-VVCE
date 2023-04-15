@@ -1,5 +1,5 @@
 import mongoose from "mongoose";
-import User from "../../models/userModel.js";
+import User from "../models/userModel.js";
 
 export const get_logged_user_query = async (id) => {
   const user = await User.findOne({ _id: id }).select("-password");
