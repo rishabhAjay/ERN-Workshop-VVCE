@@ -1,4 +1,4 @@
-import Application from "../../models/applicationModel.js";
+import Application from "../models/applicationModel.js";
 
 export const post_application_by_jobId_query = async (
   user,

@@ -1,14 +1,14 @@
 import express from "express";
-import auth from "../../middleware/auth.js";
+import auth from "../middleware/auth.js";
 
 import {
   delete_application_by_id_service,
   get_applications_by_user_service,
   post_application_by_jobId_service,
   put_edit_application_by_id_service,
-} from "../../services/v1/userApplicationServices.js";
+} from "../services/userApplicationServices.js";
 import { body } from "express-validator";
-import validation from "../../middleware/validation.js";
+import validation from "../middleware/validation.js";
 const router = express.Router();
 
 router.post(

@@ -2,7 +2,7 @@ import {
   post_application_by_jobId_query,
   put_edit_application_by_id_query,
   get_applications_by_user_query,
-} from "../../data/v1/userApplicationQueries.js";
+} from "../data/userApplicationQueries.js";
 import { validationResult } from "express-validator";
 export const post_application_by_jobId_service = async (req, res) => {
   const user = req.user.id;

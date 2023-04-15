@@ -5,7 +5,7 @@ import auth from "../../middleware/auth.js";
 import {
   get_logged_user_service,
   post_login_user_service,
-} from "../../services/v1/userAuthService.js";
+} from "../../services/userAuthService.js";
 import { check } from "express-validator";
 import validation from "../../middleware/validation.js";
 const router = express.Router();

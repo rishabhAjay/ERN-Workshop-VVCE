@@ -1,10 +1,10 @@
 //import routes
-import userAuth from "./routes/v1/userAuth.js";
-import userRegister from "./routes/v1/userRegister.js";
-import userApplications from "./routes/v1/userApplications.js";
+import userAuth from "./routes/userAuth.js";
+import userRegister from "./routes/userRegister.js";
+import userApplications from "./routes/userApplications.js";
 import express from "express";
 import cors from "cors";
-import connectDB from "./data/db.js";
+import connectDB from "./config/db.js";
 import { PORT } from "./utils/envVariables.js";
 
 const app = express();
@@ -18,9 +18,9 @@ app.use(cors());
 connectDB();
 
 //define routes
-app.use("/api/v1/auth", userAuth);
-app.use("/api/v1/register", userRegister);
-app.use("/api/v1/applications", userApplications);
+app.use("/api/auth", userAuth);
+app.use("/api/register", userRegister);
+app.use("/api/applications", userApplications);
 
 //API documentation route
 

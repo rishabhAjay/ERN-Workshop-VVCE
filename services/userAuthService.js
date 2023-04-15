@@ -1,7 +1,7 @@
 import {
   get_logged_user_query,
   post_login_user_query,
-} from "../../data/v1/userAuthQueries.js";
+} from "../../data/userAuthQueries.js";
 import bcrypt from "bcryptjs";
 import jwt from "jsonwebtoken";
 import { jwtExpiry, jwtSecret } from "../../utils/envVariables.js";
