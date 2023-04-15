@@ -1,10 +1,10 @@
 import express from "express";
-import { post_register_user_service } from "../../services/v1/userRegisterService.js";
+import { post_register_user_service } from "../services/userRegisterService";
 
 const router = express.Router();
 
 /*
-route: api/v1/register
+route: api/register
 method: POST
 description: register a user
 access: public

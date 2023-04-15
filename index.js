@@ -1,6 +1,6 @@
 //import routes
-import userAuth from "./routes/v1/userAuth.js";
-import userRegister from "./routes/v1/userRegister.js";
+import userAuth from "./routes/userAuth.js";
+import userRegister from "./routes/userRegister.js";
 import userApplications from "./routes/userApplications.js";
 import express from "express";
 import cors from "cors";
