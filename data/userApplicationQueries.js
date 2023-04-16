@@ -1,11 +1,6 @@
 import Application from "../models/applicationModel.js";
 
-export const post_application_by_jobId_query = async (
-  user,
-  dob,
-  phone,
-  skills
-) => {
+export const post_application_by_jobId_query = (user, dob, phone, skills) => {
   const finalResult = new Application({
     user,
     basicDetails: {
@@ -15,24 +10,24 @@ export const post_application_by_jobId_query = async (
     skills: [...skills],
   });
 
-  return await finalResult.save();
+  return finalResult.save();
 };
 
-export const get_applications_by_user_query = async (user) => {
-  const result = await Application.find({
+export const get_applications_by_user_query = (user) => {
+  const result = Application.find({
     user,
-  });
+  }).exec();
   return result;
 };
 
-export const put_edit_application_by_id_query = async (
+export const put_edit_application_by_id_query = (
   applicationId,
   user,
   dob,
   phone,
   skills
 ) => {
-  const result = await Application.findOneAndUpdate(
+  const result = Application.findOneAndUpdate(
     { _id: applicationId, user },
     {
       $set: {
@@ -42,6 +37,15 @@ export const put_edit_application_by_id_query = async (
       },
     },
     { new: true }
-  );
+  ).exec();
+  return result;
+};
+
+export const delete_application_by_id_query = (applicationId, user) => {
+  console.log(applicationId, user);
+  const result = Application.findOneAndDelete({
+    _id: applicationId,
+    user,
+  }).exec();
   return result;
 };

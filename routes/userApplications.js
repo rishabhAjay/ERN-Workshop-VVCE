@@ -71,7 +71,7 @@ access: private
 */
 
 router.delete(
-  "/application/applicationId",
+  "/application/:applicationId",
   auth,
   delete_application_by_id_service
 );
