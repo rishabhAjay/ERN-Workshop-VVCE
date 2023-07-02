@@ -35,9 +35,9 @@ router.post(
         role: "user",
       });
 
-      await user.save();
+      const result = await user.save();
 
-      res.status(201).json({ result: "saved user successfully" });
+      res.status(201).json({ result: result._id });
     } catch (error) {
       console.log(error.message);
       res.status(500).send("server error");
