@@ -10,13 +10,6 @@ import { mongoURL, sessionSecret } from "./utils/envVariables.js";
 const app = express();
 app.use(express.json());
 
-app.use((req, res, next) => {
-  res.append("Access-Control-Allow-Origin", ["http://localhost:3000"]);
-  res.append("Access-Control-Allow-Methods", "GET,PUT,POST,DELETE");
-  res.append("Access-Control-Allow-Headers", "Content-Type");
-  res.append("Access-Control-Allow-Credentials", "true");
-  next();
-});
 app.use(cookieParser());
 const thirtySeconds = 1000 * 30;
 
@@ -25,7 +18,7 @@ app.use(
     secret: sessionSecret,
     saveUninitialized: false,
     cookie: { maxAge: thirtySeconds },
-    resave: true,
+    resave: false,
     rolling: true,
     store: MongoStore.create({
       mongoUrl: mongoURL,
@@ -44,7 +37,7 @@ app.post("/login", (req, res) => {
       req.session.user = req.body.username;
       console.log(req.session);
       res.json({
-        data: `Hey there, welcome <a href=\'/logout'>click to logout</a>`,
+        data: `Hey there, welcome!`,
       });
     } else {
       res.json({
