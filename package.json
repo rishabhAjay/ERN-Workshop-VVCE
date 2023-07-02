@@ -1,0 +1,31 @@
+{
+  "name": "task-management-express-app",
+  "version": "1.0.0",
+  "type": "module",
+  "description": "**Edit a file, create a new file, and clone from Bitbucket in under 2 minutes**",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "nodemon index.js"
+  },
+  "repository": "git+https://rishabhajay24@bitbucket.org/spurtreetech/stp_10233_sttepup2022_node_groupa.git",
+  "keywords": [],
+  "author": "Rohit kumar pattanayak <rohit.p@spurtreetech.com>",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://bitbucket.org/spurtreetech/stp_10233_sttepup2022_node_groupa/issues"
+  },
+  "homepage": "https://bitbucket.org/spurtreetech/stp_10233_sttepup2022_node_groupa#readme",
+  "dependencies": {
+    "cors": "^2.8.5",
+    "dotenv": "^16.0.1",
+    "express": "^4.18.1",
+    "express-basic-auth": "^1.2.1",
+    "express-validator": "^6.14.3",
+    "lodash": "^4.17.21",
+    "nodemon": "^2.0.20",
+    "serverless-http": "^3.2.0",
+    "swagger-jsdoc": "^6.2.8",
+    "swagger-ui-express": "^4.6.0"
+  }
+}
