@@ -1,6 +1,32 @@
 import express from "express";
 import cors from "cors";
 import { PORT } from "./utils/constants.js";
+import http from "http";
+
+// WITH OUT EXPRESS FRAMEWORK
+
+// const server = http.createServer(async (req, res) => {
+//   //set the request route
+//   if (req.url === "/" && req.method === "GET") {
+//     //response headers
+//     res.writeHead(200, { "Content-Type": "application/json" });
+//     //set the response
+//     res.write("welcome to node express basics");
+//     //end the response
+//     res.end();
+//   }
+
+//   // If no route present
+//   else {
+//     res.writeHead(404, { "Content-Type": "application/json" });
+//     res.end(JSON.stringify({ message: "Route not found" }));
+//   }
+// });
+// server.listen(PORT, () => {
+//   console.log(`server started on port: ${PORT}`);
+// });
+
+// WITH EXPRESS FRAMEWORK
 
 const app = express();
 
